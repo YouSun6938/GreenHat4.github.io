@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>‘养元兽’小程序</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+    </link>
+</head>
+
+<body>
+    <div class="project-header">
+        <h1>‘养元兽’小程序</h1>
+        <p>
+            该项目采用主流技术栈实现，MySQL数据库，SpringBoot2后端</br>
+            微信小程序端涵盖了axios异步请求，swiper组件，等 应用于微信小程序提供的登录等</br>
+            后台管理采用了主流的Vue3.2+Element Plus组件 实现，涵盖了axios+Promise工具类封装，</br>
+            使用了大量的Element Plus组件，如表格，分页，图片上传，下拉框，Form表单等等。</br>
+       
+        </p>
+
+    </div>
+
+    <div id="content">
+        <div class="feature-section">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2>功能模块图</h2>
+                    <p>该小程序能够向使用者传达科学的养生知识，养生观念。为满足对养生知识的需求，该小程序针对部分学生和上班族群体。
+                        主要应用范围有：
+                        (1)为亚健康人群提供个性化知识服务。
+                        (2)为用户提供适时、合理的养生保健建议。
+                        (3)提供线上咨询平台服务等
+                        (4)提供可靠的购物商城</p>
+                    <div class="tech-stack">
+                        <!-- <span class="tech-tag">高德地图API</span>
+                        <span class="tech-tag">地理定位</span>
+                        <span class="tech-tag">隐私保护</span> -->
+                    </div>
+                </div>
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/health-miniapp/微信图片_20250326180005.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img src="../images/health-miniapp/微信图片_20250326172323.png" alt="兴趣群组功能展示">
+                        <img src="../images/health-miniapp/微信图片_20250326172351.png" alt="兴趣群组功能展示">
+
+                    </div>
+                </div>
+                <div class="feature-text">
+                    <h2>首页</h2>
+                    <p>首页展示了小程序的主要功能入口，包括养生知识、个性化服务、养生建议、线上咨询和购物商城等。
+                        采用swiper组件实现轮播图效果，展示热门养生知识和推荐商品。使用自定义组件构建功能入口，通过axios异步请求获取后端数据，实现动态内容展示。</p>
+                    <div class="tech-stack">
+                        <!-- <span class="tech-tag">即时通讯</span>
+                        <span class="tech-tag">群组管理</span>
+                        <span class="tech-tag">活动组织</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2>健康知识</h2>
+                    <p>选择书籍、提供专家相关文章，支持分类浏览和搜索功能。
+                        使用Vue3.2的Composition API构建页面逻辑</p>
+                    <div class="tech-stack">
+                        <!-- <span class="tech-tag">路线规划</span>
+                        <span class="tech-tag">实时导航</span>
+                        <span class="tech-tag">POI搜索</span> -->
+                    </div>
+                </div>
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img src="../images/health-miniapp/微信截图_20250326233821.png" alt="兴趣群组功能展示">
+                        <img src="../images/health-miniapp/微信截图_20250326233843.png" alt="兴趣群组功能展示">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img src="../images/health-miniapp/微信图片_20250326172746.png" alt="兴趣群组功能展示">
+                        <img src="../images/health-miniapp/微信图片_20250326172852.png" alt="兴趣群组功能展示">
+                    </div>
+                    <!-- <img src="../images/health-miniapp/微信图片_20250326003821.png" alt="兴趣群组功能展示"> -->
+                </div>
+                <div class="feature-text">
+                    <h2>线上咨询平台</h2>
+                    <p>提供专业的养生咨询师在线咨询服务，根据用户填写的时节和用户习惯，提供适时、合理的养生保健建议。
+                        集成微信小程序的即时通讯功能，实现实时对话。采用前端加密技术保障用户隐私安全。</p>
+                    <div class="tech-stack">
+                        <!-- <span class="tech-tag">即时通讯</span>
+                        <span class="tech-tag">群组管理</span>
+                        <span class="tech-tag">活动组织</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content" style="grid-template-columns:0.6fr 1.4fr;">
+    
+                <div class="feature-text">
+                    <h2>个人信息</h2>
+                    <p>展示用户个人信息、订单记录、收藏夹等内容，提供地址管理和设置功能。
+                        技术细节：采用Vue3.2的组件化开发方式，提高页面维护性。使用微信小程序提供的地址管理API，
+                        方便用户管理收货地址。</p>
+                    <div class="tech-stack">
+                        <!-- <span class="tech-tag">即时通讯</span>
+                        <span class="tech-tag">群组管理</span>
+                        <span class="tech-tag">活动组织</span> -->
+                    </div>
+                </div>
+    
+                <div class="feature-image">
+                    <div class="image-gallery" style="grid-template-columns: repeat(4, 1fr);">
+                        <img src="../images/health-miniapp/微信图片_20250326172549.png" alt="兴趣群组功能展示">
+                        <img src="../images/health-miniapp/图片3.png" alt="兴趣群组功能展示">
+                        <img src="../images/health-miniapp/图片4.png" alt="兴趣群组功能展示">
+                    </div>
+                    <!-- <img src="../images/health-miniapp/微信图片_20250326003821.png" alt="兴趣群组功能展示"> -->
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="feature-section">
+            <div class="feature-content" style="grid-template-columns: 1.4fr 0.6fr;">
+                <div class="feature-image">
+                    <div class="image-gallery" style="grid-template-columns: repeat(4, 1fr);">
+                        <img src="../images/health-miniapp/微信图片_20250326172446.png" alt="兴趣群组功能展示">
+                        <img src="../images/health-miniapp/微信图片_20250326172522.png" alt="兴趣群组功能展示">
+                        <img src="../images/health-miniapp/微信图片_20250326172642.png" alt="兴趣群组功能展示">
+                    </div>
+                    <!-- <img src="../images/health-miniapp/微信图片_20250326003821.png" alt="兴趣群组功能展示"> -->
+                </div>
+                <div class="feature-text">
+                    <h2>购物商城</h2>
+                    <p>提供大健康产品购物服务，包括商品浏览、搜索、下单和支付等功能。
+                        后端结合SpringBoot2+Mybatis Plus管理商品信息和订单流程。集成微信小程序的支付功能，
+                        实现便捷的在线支付。使用navicat16.0作为数据库管理工具，确保数据安全性和可维护性。</p>
+                    <div class="tech-stack">
+                        <!-- <span class="tech-tag">即时通讯</span>
+                        <span class="tech-tag">群组管理</span>
+                        <span class="tech-tag">活动组织</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    
+
+    <script>
+        // 添加滚动动画
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>

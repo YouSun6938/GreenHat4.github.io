@@ -1,0 +1,114 @@
+        
+        .project-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-header p {
+            font-size: 1.2em;
+            color: #34495e;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        
+        .feature-section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .feature-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feature-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .feature-text {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 24px;
+        }
+
+        .feature-text h2 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 15px;
+            
+        }
+
+        .feature-text h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 24px;
+            background: #1976d2;
+            border-radius: 2px;
+        }
+
+        .feature-text p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #34495e;
+        }
+
+        .feature-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
+        }
+
+        .feature-image:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-image img {
+            width: 100%;
+            height: 500px;
+            display: block;
+            object-fit: contain;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(25, 118, 210, 0.1);
+            color: #1976d2;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }

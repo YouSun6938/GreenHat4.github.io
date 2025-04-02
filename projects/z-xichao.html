@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web项目-喜潮旅</title>
+    <link rel="stylesheet" href="../styles.css"></link>
+    <link rel="styles" href="z-style.css">
+    </link>
+    <style>
+        .feature-section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .feature-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feature-content {
+            display: flex;
+            flex-direction: column;  /* 竖向排列 */
+            gap: 30px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-text {
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-text h2 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .feature-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #1976d2;
+            border-radius: 2px;
+        }
+
+        .feature-text p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #34495e;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .image-gallery {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-gallery img {
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .tech-tag {
+            background: rgba(25, 118, 210, 0.1);
+            color: #1976d2;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .feature-text {
+                padding: 20px;
+            }
+
+            .feature-image {
+                padding: 10px;
+            }
+
+            .image-gallery {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="project-header">
+        <h1>web项目-喜潮旅</h1>
+        <p>专注于潮州旅游攻略的平台，旨在更好地服务游客，提供详尽的旅游信息和便捷的导航服务，
+            包含用户管理、文章发布管理、景点管理、旅游路线规划等模块</br>
+            技术栈：SpringBoot、MyBatis-Plus、MySql、Elasticsearch、RabbitMQ、Redis、nginx、Vue、高德地图API</br>
+        </p>
+    </div> -->
+    <div id="content">
+
+        <div class="feature-section">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2>web项目-喜潮旅</h2>
+                    <p>
+                        专注于潮州旅游攻略的平台，旨在更好地服务游客，提供详尽的旅游信息和便捷的导航服务，
+            包含用户管理、文章发布管理、景点管理、旅游路线规划等模块</br>
+            技术栈：SpringBoot、MyBatis-Plus、MySql、Elasticsearch、RabbitMQ、Redis、nginx、Vue、高德地图API
+                    </p>
+                </div>
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片1.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片2.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片3.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片4.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片5.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片6.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片7.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片8.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片9.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片10.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片11.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片12.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img style="width: 100%; height: auto;" src="../images/z-xichao/图片13.png"
+                            alt="功能展示图1">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+    <script>
+        // 添加滚动动画
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>

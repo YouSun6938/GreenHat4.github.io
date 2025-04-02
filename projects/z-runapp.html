@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跑腿配送APP</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+    </link>
+</head>
+
+<body>
+    <div class="project-header">
+        <h1>跑腿配送APP</h1>
+        <p>一款基于uniapp框架的跑腿APP，涵盖三个模块：<br>用户端：面向最终用户，提供便捷的服务下单、实时追踪、评价反馈等功能。
+            <br>配送端：面向跑腿员，提供便捷的接单、任务管理、接单数据统计等功能。
+            <br>后台管理端：用于平台运营管理，包括订单监控、跑腿员管理、数据分析、系统设置等。
+            <br>技术栈：Uniapp、Vue、SpringBoot、Mysql、腾讯地图API、ThorUI、Echarts
+            <br>个人主要完成小程序端的前端界面。
+        </p>
+    </div>
+    <div id="content">
+
+    
+
+        <div class="feature-section">
+            <div class="feature-content">
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img src="../images/run-app/微信图片_202504021031164.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_20250402103036.png" alt="兴趣群组功能展示">
+                    </div>
+                </div>
+                <div class="feature-text">
+                    <h2>用户端-首页</h2>
+                    <p>首页通过点击滑动导航栏实现帮我送、帮我买、帮我取三大功能的切换，地图展示用户所在地点，搜索附近的骑手并展示，可在首页搜索地点，点击后进入下单界面</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">tui-tabs</span>
+                        <span class="tech-tag">cover-view</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content" style="grid-template-columns:1.4fr 0.6fr ;">
+                <div class="feature-image">
+                    <div class="image-gallery" style="grid-template-columns: repeat(4, 1fr);">
+                        <img src="../images/run-app/微信图片_202504021031162.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_202504021031163.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_202504021031161.png" alt="兴趣群组功能展示">
+                    </div>
+                </div>
+
+                <div class="feature-text">
+                    <h2>用户端-帮我买</h2>
+                    <p>用户点击“帮我买”后进入该页面，可选择“就近购买”或者“指定地址购买”，填写基本信息后需要输入预估的商品费用，骑手垫付商品费，送货时当面结算</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content" style="grid-template-columns:0.6fr  1.4fr ;">
+                <div class="feature-text">
+                    <h2>用户端-下单页</h2>
+                    <p>用户在下单页可以选择物品信息，包括重量、类型，选择起始地址，输入备注，查看优惠券，系统通物品距离和重量动态计算跑腿费用</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">chooseLocation</span>
+                        <span class="tech-tag">事件监听</span>
+                    </div>
+                </div>
+                <div class="feature-image">
+                    <div class="image-gallery"  style="grid-template-columns: repeat(4, 1fr);">
+                        <img src="../images/run-app/微信图片_202504021031151.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_20250402103116.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_20250402103115.png" alt="兴趣群组功能展示">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content" style="grid-template-columns: 1.4fr 0.6fr;">
+                <div class="feature-image">
+                    <div class="image-gallery"  style="grid-template-columns: repeat(4, 1fr);">
+                        <img src="../images/run-app/微信图片_202504021031165.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_202504021031166.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_202504021031167.png" alt="兴趣群组功能展示">
+
+                    </div>
+                    <!-- <img src="../images/run-app/微信图片_20250326003821.png" alt="兴趣群组功能展示"> -->
+                </div>
+                <div class="feature-text">
+                    <h2>用户端-订单详情</h2>
+                    <p>用户下单后可进入订单详情界面，展示订单完成进度、订单信息，订单完成后可进行评价、开发票等操作</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content">
+    
+                <div class="feature-text">
+                    <h2>用户端-评价页面</h2>
+                    <p>订单完成后用户可对骑手、平台进行综合评价与反馈，</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">tui-grade</span>
+                    </div>
+                </div>
+    
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img src="../images/run-app/微信图片_202504021031171.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_20250402103117.png" alt="兴趣群组功能展示">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content" >
+                <div class="feature-image">
+                    <div class="image-gallery">
+                        <img src="../images/run-app/微信图片_202504021031172.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_202504021031173.png" alt="兴趣群组功能展示">
+                    </div>
+                </div>
+                <div class="feature-text">
+                    <h2>用户端-个人信息</h2>
+                    <p>用户进入个人页面后可进行地址修改、登录注册等</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content" >
+    
+                <div class="feature-text">
+                    <h2>跑腿端-接单</h2>
+                    <p>动态刷新展示取件地址、收件地址、骑手位置，展示订单详情，跟据“接单->已到达->已送达->完成”顺序完成订单流程</p>
+                </div>
+    
+                <div class="feature-image">
+                    <div class="image-gallery" style="grid-template-columns: repeat(4, 1fr);">
+                        <img src="../images/run-app/微信图片_202504021031177.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_202504021031174.png" alt="兴趣群组功能展示">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-content" >
+
+                <div class="feature-image">
+                    <div class="image-gallery" style="grid-template-columns: repeat(4, 1fr);">
+                        <img src="../images/run-app/微信图片_202504021031175.png" alt="兴趣群组功能展示">
+                        <img src="../images/run-app/微信图片_202504021031176.png" alt="兴趣群组功能展示">
+                    </div>
+                </div>
+                <div class="feature-text">
+                    <h2>跑腿端-其他设置</h2>
+                    <p>修改密码、接单设置，分别用到picker、setInterval</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        // 添加滚动动画
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>

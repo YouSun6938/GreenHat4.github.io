@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web项目-喜潮旅</title>
+    <link rel="stylesheet" href="../styles.css">
+    </link>
+    <link rel="styles" href="z-style.css">
+    </link>
+    <style>
+        .feature-section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .feature-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feature-content {
+            display: flex;
+            flex-direction: column;
+            /* 竖向排列 */
+            gap: 30px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-text {
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-text h2 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .feature-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #1976d2;
+            border-radius: 2px;
+        }
+
+        .feature-text p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #34495e;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .feature-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .image-gallery {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-gallery img {
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .tech-tag {
+            background: rgba(25, 118, 210, 0.1);
+            color: #1976d2;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .feature-text {
+                padding: 20px;
+            }
+
+            .feature-image {
+                padding: 10px;
+            }
+
+            .image-gallery {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+
+        <div class="feature-section">
+            <div class="feature-content">
+                <div class="feature-text">
+
+                    <h2>易起团 小程序</h2>
+                    <p>
+                        该项目是面向大学生的社区团购平台，基于微服务技术架构，主要以Alibaba系列微服务组件进行构建，围绕业务拆分需求，细分为系统服
+                        务、营销服务、权限服务、商品服务、购物车服务、支付服务、物流服务、搜索服务等，打造区域化、本地化、网络化的电商团购平台。<br><br>
+
+                        技 术 栈 ： SpringBoot+SpringCloud 、 Nacos 、 OpenFeign 、 Gateway 、 MyBatis-Plus 、 Redis 、 MySql 、
+                        Redisson 、 RabbitMQ 、
+                        ElasticSearch、Kibana、Nginx <br><br>
+                        负责内容<br>
+                        1.负责部分需求分析、功能模块设计、部分模块接口文档编写。<br>
+                        2.负责部分订单管理模块、商品管理模块以及用户管理模块的设计以及编码。<br>
+                        ①使用SpringCloud Gateway网关实现登录校验逻辑，实现微服务之间用户登录信息的共享和调用。<br>
+                        ②商品上下架过程中，通过RabbitMQ异步的方式发送消息，修改商品信息，使用远程调用同步商品数据到es中。<br>
+                        ③使用Elasticsearch倒排索引存储商品SKU数据、库存数据等，实现快速检索数据，提高检索速度，精确匹配。<br>
+                        ④使用Redis+Lua脚本实现对秒杀业务的异步优化，并使用MQ消息队列发送异步消息确认支付状态、扣减库存。<br>
+                        ⑤订单生成模块中，使用Redission组件锁定订单部分业务流程，实现一人一单，防止超卖以及重复购买等问题。<br>
+                        ⑥使用Spring Task设置定时任务，定期处理超时订单。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        // 添加滚动动画
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
